@@ -8,5 +8,8 @@ def soma(a, b):
 @app.get("/funcionamentoSoma")
 async def funcionamento_soma(a: int, b: int):
     resultado = soma(a, b)
-    return {"resultado": resultado}
-    return {"resultado": resultado}
+    return {
+        "a": a,
+        "b": b,
+        "resultado": resultado
+    }
