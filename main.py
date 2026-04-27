@@ -11,5 +11,5 @@ async def funcionamento_soma(a: int, b: int):
     return {
         "a": a,
         "b": b,
-        "resultadoss": resultados
+        "resultados": resultados
     }
