@@ -42,3 +42,19 @@ jobs:
 
       - name: Simular deploy
         run: echo "Deploy realizado com sucesso 🚀"
+
+
+
+
+
+
+
+  Discord:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Discord Webhook
+        uses: johnnyhuy/actions-discord-git-webhook@main
+        with:
+          webhook_url: ${{ secrets.YOUR_DISCORD_WEBHOOK_URL }}
