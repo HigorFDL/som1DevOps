@@ -41,4 +41,21 @@ jobs:
             README.md
 
       - name: Simular deploy
+<<<<<<< Updated upstream
         run: echo "Deploy realizado com sucesso 🚀"
+=======
+        run: echo "Deploy realizado com sucesso 🚀"
+
+
+
+  Discord:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Discord Webhook
+        uses: johnnyhuy/actions-discord-git-webhook@main
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+>>>>>>> Stashed changes
